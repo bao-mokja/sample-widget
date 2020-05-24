@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import Main from './Main';
+
 
 export default function App({ initialData }) {
-  const [count, setCount] = useState(0);
+  //const [data, setData] = useState({ hits: [] });
+  
+
+ 
+  //useEffect(() => {
+    //const fetchData = async () => {
+      //const result = await axios(
+        //'https://hn.algolia.com/api/v1/search?query=redux',
+      //);
+      
+
+      //setData(result.data);
+    //};
+ 
+    //fetchData();
+  //}, []);
+ 
+  
+
   return (
-    <div>
-      <h1>{initialData.appName}</h1>
-      This is a sample stateful and server-side rendered React application.
-      <br />
-      <br />
-      Here is a button that will track how many times you click it:
-      <br />
-      <br />
-      <button title="increment" onClick={() => setCount(count + 1)}>
-        {count}
-      </button>
-    </div>
+    <Main />
   );
 }
