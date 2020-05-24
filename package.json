@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "eslint": "eslint \"src/**/*.js\"",
-    "start": "concurrently \"npm run dev:server\" \"npm run dev:bundle\"",
+    "start": "npm run prod:start",
     "test": "jest",
     "dev:server": "cross-env NODE_PATH=./src nodemon --exec \"babel-node src/server/server.js\" --ignore .reactful.json --ignore public/",
     "dev:bundle": "webpack -wd",
@@ -39,7 +39,6 @@
     "axios": "^0.19.2",
     "babel-loader": "^8.1.0",
     "body-parser": "^1.19.0",
-    "concurrently": "^5.2.0",    
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "ejs": "^3.1.3",
